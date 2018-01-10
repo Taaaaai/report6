@@ -1,10 +1,13 @@
 package jp.ac.uryukyu.ie.e175746;
+//Personクラスの継承をした子クラスGuests
 
 public class Guests extends Person{
-    /*
-        @param name
-    */
     public Guests(String name) {
         super(name);
+
+
     }
+
+
+
 }
