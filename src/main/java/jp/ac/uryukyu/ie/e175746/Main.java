@@ -11,20 +11,20 @@ public class Main {
 
         dealer.burst(dealer.getName());
         guests.burst(guests.getName());
-        if(guests.isLose() == true){
-            guests.burst(guests.getName());
-        }else if(dealer.isLose() == true){
-            dealer.burst(dealer.getName());
-        }else if(guests.isLose() == true && dealer.isLose()){
+         if(guests.isLose() == true && dealer.isLose() == true){
             System.out.println("両方の負けです");
 
         }else{
-            if(guests.getSumCards() > dealer.getSumCards()){
-                System.out.printf("%sの勝ちです\n",guests.getName());
-            }else if(guests.getSumCards() == dealer.getSumCards()) {
-                System.out.println("引き分けです");
-            }else {
-                System.out.printf("%sの勝ちです\n",dealer.getName());
+            if(guests.getSumCards() < 21){
+                if(dealer.getSumCards() < 21){
+                    if(guests.getSumCards() > dealer.getSumCards()){
+                        System.out.printf("%sの勝ちです\n",guests.getName());
+                    }else if(guests.getSumCards() == dealer.getSumCards()) {
+                        System.out.println("引き分けです");
+                    }else {
+                        System.out.printf("%sの勝ちです\n",dealer.getName());
+                    }
+                }
             }
         }
 
