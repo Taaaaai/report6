@@ -1,5 +1,6 @@
 package jp.ac.uryukyu.ie.e175746;
 //簡単なブラックジャックを作りたい
+//強制的に２枚ドローしその２枚で勝負する
 
 public class Main {
     public static void main(String[] args){
@@ -8,8 +9,8 @@ public class Main {
         System.out.println(guests.getName() + "の所持カードは" + guests.getcard1() + "と"+ guests.getCard2() + "で合計は" + guests.getSumCards()+ "です");
         System.out.println(dealer.getName() + "の所持カードは" + dealer.getcard1() + "と"+ dealer.getCard2() + "で合計は" + dealer.getSumCards()+ "です");
 
-        dealer.burst(String.valueOf(dealer));
-        guests.burst(String.valueOf(guests));
+        dealer.burst(dealer.getName());
+        guests.burst(guests.getName());
         if(guests.isLose() == true){
             guests.burst(guests.getName());
         }else if(dealer.isLose() == true){

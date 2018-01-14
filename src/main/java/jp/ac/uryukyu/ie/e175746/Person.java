@@ -24,10 +24,10 @@ public class Person {
 
     }
 
-
+    //セッターとゲッター
     public boolean isLose(){return this.lose;}
 
-
+    public void  setLose(boolean b){this.lose = lose;}
 
     public int getcard1(){return this.card;}
 
@@ -35,6 +35,7 @@ public class Person {
     public int getCard2(){return this.card2;}
 
     public int getSumCards(){return this.sumCards;}
+
 
     public String getName() { return this.name;}
 
@@ -47,6 +48,10 @@ public class Person {
         if(sumCards>21){
             System.out.printf("バーストしました。%sの負けです。\n",getName());
             lose = true;
+            this.lose = isLose();
+
+
+
         }
 
     }
